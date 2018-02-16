@@ -1,5 +1,31 @@
 {
   "web": {
     "baseURL": "http://phxm1bappd34/sites/LTC-Dev/LtcDocumentsList.aspx"
+  },
+  "RFC": {
+    "type_of_change": "Upgrade",
+    "reason_for_change": "Hybrid Qualification Complete"
+  },
+  "types_of_LLC":{
+    "ic_upgrade":true,
+    "scsp_upgrade":false,
+    "component":true,
+    "hybrid_upgrade": false,
+    "lot_upgrade":"No"
+  },
+  "questions":{
+    "question1":"No",
+    "question2":"No",
+    "question3":"Yes",
+    "question4":"No"
+  },
+  "part":{
+    "part_number":"XW028",
+    "part_revision":"1.5",
+    "part_status":"Development"
+  },
+  "JDE_Part":{
+    "Propose_LotType":"90"
   }
+
 }

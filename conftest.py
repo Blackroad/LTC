@@ -15,14 +15,16 @@ def load_config(file):
             target = json.load(opened_file)
     return target
 
+@pytest.fixture(scope='session')
+def config(request):
+    return load_config(request.config.getoption("--target"))
 
 @pytest.fixture
-def app(request):
+def app(request,config):
     global fixture
     browser = request.config.getoption("--browser")
-    web_config = load_config(request.config.getoption("--target"))['web']
     if fixture is None:
-        fixture = Application(browser= browser, base_url=web_config["baseURL"])
+        fixture = Application(browser= browser, config = config)
     return fixture
 
 
